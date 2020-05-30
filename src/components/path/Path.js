@@ -12,6 +12,7 @@ function Path() {
     const [departureStation, setDepartureStation] = useState("");
     const [arrivalStation, setArrivalStation] = useState("");
     const [isHidden, setIsHidden] = useState("hidden");
+    const [type, setType] = useState("");
 
     const onSearchPathHandler = async (type) => {
         try {
@@ -19,20 +20,21 @@ function Path() {
                 `/paths?source=${departureStation}&target=${arrivalStation}&pathType=${type}`
             );
             const result = response.data;
-            setStates(result);
+            setStates(result, type);
             setIsHidden("");
         } catch (exception) {
             window.alert(exception);
         }
     }
 
-    const setStates = result => {
+    const setStates = (result, type) => {
         const data = {
             stations: result.stations,
             duration: result.duration,
             distance: result.distance
         };
         setResult(data);
+        setType(type);
     }
 
     const onGetDepartureNameHandler = stationName => {

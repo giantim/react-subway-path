@@ -7,12 +7,8 @@ function ResultList({onTypeChangeHandler}) {
         duration: ""
     });
 
-    const onClickTypeHandler = type => {
-        return type;
-    }
-
-    const changeType = () => {
-        if (onClickTypeHandler() === "DISTANCE") {
+    const changeType = type => {
+        if (type === "DISTANCE") {
             const data = {
                 distance: "active-tab",
                 duration: ""
@@ -37,18 +33,12 @@ function ResultList({onTypeChangeHandler}) {
             <ResultItem
                 tabName={"최단거리"}
                 isActive={click.distance}
-                onClick={() => {
-                    onClickTypeHandler("DURATION");
-                    changeType();
-                }}
+                onClick={() => changeType("DISTANCE")}
             />
             <ResultItem
                 tabName={"최소시간"}
                 isActive={click.duration}
-                onClick={() => {
-                    onClickTypeHandler("DURATION");
-                    changeType();
-                }}
+                onClick={() => changeType("DURATION")}
             />
         </ul>
     );
