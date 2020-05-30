@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 
-const Layout = ({ children }) => (
+const Layout = ({children}) => (
     <>
         <Header/>
         <div className="bg-gray-200 h-screen">

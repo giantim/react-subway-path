@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = props => (
+const Header = () => (
   <nav className="flex items-center justify-between flex-wrap bg-yellow-500 p-4 relative">
     <div className="flex items-center flex-shrink-0 text-gray-800 w-full">
       <a href="/" className="mr-2">

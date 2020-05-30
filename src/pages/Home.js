@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-const Home = props => (
+const Home = () => (
     <div className="text-center">
         <img src="/service/images/main_logo.png" className="main-logo mx-auto"/>
         <p className="mt-2 text-gray-700">

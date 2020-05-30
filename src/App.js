@@ -1,11 +1,9 @@
 import React from "react";
-
 import Home from "./pages/Home";
 import Layout from "./components/Layout";
-
+import Path from "./components/path/Path";
 import "./assets/service/css/app.css";
 import "./assets/service/css/search.css";
-import Search from "./components/Search";
 import {Route} from "react-router-dom";
 
 const App = () => (
@@ -18,7 +16,7 @@ const App = () => (
         <Route
             path="/search"
             exact={true}
-            component={Search}
+            component={Path}
         />
     </Layout>
 );
